@@ -1,25 +1,29 @@
-import logo from './logo.svg';
 import './App.css';
+import Pessoa from './components/Pessoa';
+import Frase from './components/Frase';
+import List from './components/List';
+
 
 function App() {
+  
+  const nome = 'NavBar'
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+   <div className='App'>
+
+
+      <Frase nome={nome}/>
+     
+      {/* Componente Pessoa*/}
+      <Pessoa nome='Glauco'
+       idade='29'
+       profissao='Programador'
+       foto='https://via.placeholder.com/150'/>
+
+       {/* Componente Lista com ul e li */}
+      <List/>
+   </div>
+
+  )
 }
 
 export default App;
